@@ -1,0 +1,154 @@
+<html>
+
+	<head>
+		<title>Parallax example</title>
+
+
+		<style>
+
+			*{
+				margin: 0;
+				padding: 0;
+			}
+
+			.section-one{
+				position: relative;
+				height: 662px;
+				background: red url('https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE2v4cs?ver=e4c9&amp;q=90&amp;m=6&amp;h=750&amp;w=539&amp;b=%23FFFFFFFF&amp;l=f&amp;f=jpg&amp;o=t&amp;x=1456&amp;y=213&amp;aim=true') no-repeat;
+				background-size: cover;
+				z-index: 9;
+			}
+			.section-two{
+				position: relative;
+				height: 662px;
+
+			}
+			.section-two::before{
+				content: '';
+				background: blue url('https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE2uZ8g?ver=c513&amp;q=90&amp;m=6&amp;h=750&amp;w=539&amp;b=%23FFFFFFFF&amp;l=f&amp;f=jpg&amp;o=t&amp;aim=true') no-repeat;
+				background-size: cover;
+				position: fixed;
+				top: 0;
+				left: 0;
+				height: 100%;
+				width: 100%;
+			}
+			.section-three{
+				position: relative;
+				height: 662px;
+				background: green url('https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE2wVv1?ver=5ff3&amp;q=90&amp;m=6&amp;h=750&amp;w=539&amp;b=%23FFFFFFFF&amp;l=f&amp;f=jpg&amp;o=t&amp;aim=true') no-repeat;
+				background-size: cover;
+			}
+
+			@keyframes panelFadeIn {
+				0% {
+					opacity: 0
+				}
+
+				100% {
+					opacity: 1
+				}
+			}
+
+			@keyframes panelFadeOut {
+				0% {
+					opacity: 1
+				}
+
+				100% {
+					opacity: 0
+				}
+			}
+
+			.text-block{
+				background-color: white;
+				width: 50%;
+				height: 170px;
+				color: black;
+				
+				position: absolute;
+				top: 185px;
+				left: 40px;
+				opacity:0;
+				padding: 20px;
+				max-width: 300px;
+
+			}
+			.text-block.panel-fade-in{
+				animation: panelFadeIn .75s linear;
+				opacity: 1;
+			}
+
+			/* On screens that are 768px or less, set the background color to olive */
+			@media screen and (max-width: 768px) {
+				.section-one{
+					background: red url('https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE2v4cs?ver=e4c9&amp;q=90&amp;m=6&amp;h=750&amp;w=539&amp;b=%23FFFFFFFF&amp;l=f&amp;f=jpg&amp;o=t&amp;x=1456&amp;y=213&amp;aim=true') no-repeat;
+					background-size: cover;
+					background-position-x: -450px;
+				}
+				.section-two::before{
+					content: '';
+					background: blue url('https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE2uZ8g?ver=c513&amp;q=90&amp;m=6&amp;h=750&amp;w=539&amp;b=%23FFFFFFFF&amp;l=f&amp;f=jpg&amp;o=t&amp;aim=true') no-repeat;
+					background-size: cover;
+					background-position-x: -450px;
+				}
+				.section-three{
+					background: green url('https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE2wVv1?ver=5ff3&amp;q=90&amp;m=6&amp;h=750&amp;w=539&amp;b=%23FFFFFFFF&amp;l=f&amp;f=jpg&amp;o=t&amp;aim=true') no-repeat;
+					background-size: cover;
+					background-position-x: -450px;
+				}
+
+			}
+
+		</style>
+
+		<script>
+			window.addEventListener("scroll", function(event) {
+		
+				var top = this.scrollY,
+					left = this.scrollX;
+		
+				if(top > 40){
+					document.getElementById("firsText").classList.add("panel-fade-in");
+				}
+				if(top > 300){
+					document.getElementById("secondText").classList.add("panel-fade-in");
+				}
+				if(top > 577){
+					document.getElementById("thirdText").classList.add("panel-fade-in");
+				}
+				console.log(top);
+		
+			}, false);
+		
+		</script>
+
+	</head>
+
+	<body>
+
+		<section class="section-one">
+			<div id="firsText" class="text-block">
+				<h1>Turn it up, tune it out</h1>
+				<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium.</p>
+			</div>
+
+		</section>
+		<section class="section-two">
+			<div id="secondText" class="text-block">
+				<h2>Get comfortable</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do.</p>
+			</div>
+		</section>
+		<section class="section-three">
+				<div id="thirdText" class="text-block">
+					<h3>Say hello to your new assistant</h3>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+				</div>
+		</section>
+
+	</body>
+
+
+
+</html>

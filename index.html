@@ -13,8 +13,8 @@
 
 			.section-one{
 				position: relative;
-				height: 662px;
-				background: red url('https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE2v4cs?ver=e4c9&amp;q=90&amp;m=6&amp;h=750&amp;w=539&amp;b=%23FFFFFFFF&amp;l=f&amp;f=jpg&amp;o=t&amp;x=1456&amp;y=213&amp;aim=true') no-repeat;
+				height: 800px;
+				background: url('https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE2v4cs?ver=e4c9&amp;q=90&amp;m=6&amp;h=750&amp;w=539&amp;b=%23FFFFFFFF&amp;l=f&amp;f=jpg&amp;o=t&amp;x=1456&amp;y=213&amp;aim=true') no-repeat;
 				background-size: cover;
 				z-index: 9;
 			}
@@ -25,7 +25,7 @@
 			}
 			.section-two::before{
 				content: '';
-				background: blue url('https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE2uZ8g?ver=c513&amp;q=90&amp;m=6&amp;h=750&amp;w=539&amp;b=%23FFFFFFFF&amp;l=f&amp;f=jpg&amp;o=t&amp;aim=true') no-repeat;
+				background: url('https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE2uZ8g?ver=c513&amp;q=90&amp;m=6&amp;h=750&amp;w=539&amp;b=%23FFFFFFFF&amp;l=f&amp;f=jpg&amp;o=t&amp;aim=true') no-repeat;
 				background-size: cover;
 				position: fixed;
 				top: 0;
@@ -35,10 +35,22 @@
 			}
 			.section-three{
 				position: relative;
-				height: 662px;
-				background: green url('https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE2wVv1?ver=5ff3&amp;q=90&amp;m=6&amp;h=750&amp;w=539&amp;b=%23FFFFFFFF&amp;l=f&amp;f=jpg&amp;o=t&amp;aim=true') no-repeat;
+				height: 800px;
+				background: url('https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE2wVv1?ver=5ff3&amp;q=90&amp;m=6&amp;h=750&amp;w=539&amp;b=%23FFFFFFFF&amp;l=f&amp;f=jpg&amp;o=t&amp;aim=true') no-repeat;
 				background-size: cover;
 			}
+
+
+			 @media screen and (orientation:portrait) {
+				 /*
+				.section-two::before{
+					top: 260px;
+					left: 0;
+					height: 1200px;
+					width: 1024px;
+				}
+				*/
+			  }
 
 			@keyframes panelFadeIn {
 				0% {
@@ -82,18 +94,18 @@
 			/* On screens that are 768px or less, set the background color to olive */
 			@media screen and (max-width: 768px) {
 				.section-one{
-					background: red url('https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE2v4cs?ver=e4c9&amp;q=90&amp;m=6&amp;h=750&amp;w=539&amp;b=%23FFFFFFFF&amp;l=f&amp;f=jpg&amp;o=t&amp;x=1456&amp;y=213&amp;aim=true') no-repeat;
+					background: url('https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE2v4cs?ver=e4c9&amp;q=90&amp;m=6&amp;h=750&amp;w=539&amp;b=%23FFFFFFFF&amp;l=f&amp;f=jpg&amp;o=t&amp;x=1456&amp;y=213&amp;aim=true') no-repeat;
 					background-size: cover;
 					background-position-x: -450px;
 				}
 				.section-two::before{
 					content: '';
-					background: blue url('https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE2uZ8g?ver=c513&amp;q=90&amp;m=6&amp;h=750&amp;w=539&amp;b=%23FFFFFFFF&amp;l=f&amp;f=jpg&amp;o=t&amp;aim=true') no-repeat;
+					background: url('https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE2uZ8g?ver=c513&amp;q=90&amp;m=6&amp;h=750&amp;w=539&amp;b=%23FFFFFFFF&amp;l=f&amp;f=jpg&amp;o=t&amp;aim=true') no-repeat;
 					background-size: cover;
 					background-position-x: -450px;
 				}
 				.section-three{
-					background: green url('https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE2wVv1?ver=5ff3&amp;q=90&amp;m=6&amp;h=750&amp;w=539&amp;b=%23FFFFFFFF&amp;l=f&amp;f=jpg&amp;o=t&amp;aim=true') no-repeat;
+					background: url('https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE2wVv1?ver=5ff3&amp;q=90&amp;m=6&amp;h=750&amp;w=539&amp;b=%23FFFFFFFF&amp;l=f&amp;f=jpg&amp;o=t&amp;aim=true') no-repeat;
 					background-size: cover;
 					background-position-x: -450px;
 				}
@@ -114,7 +126,7 @@
 				if(top > 300){
 					document.getElementById("secondText").classList.add("panel-fade-in");
 				}
-				if(top > 577){
+				if(top > 477){
 					document.getElementById("thirdText").classList.add("panel-fade-in");
 				}
 				console.log(top);

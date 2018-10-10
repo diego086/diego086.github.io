@@ -1,0 +1,615 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML+RDFa 1.0//EN"
+"http://www.w3.org/MarkUp/DTD/xhtml-rdfa-1.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" version="XHTML+RDFa 1.0" dir="ltr">
+<head profile="http://www.w3.org/1999/xhtml/vocab">
+<!--[if IE]><![endif]-->
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script type="text/javascript">
+	window.NREUM||(NREUM={}),
+	__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(3),u=e(4),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}catch(e){throw f.emit("fn-err",[arguments,this,e],t),e}finally{f.emit("fn-end",[c.now()],t)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now()])}},{}],2:[function(e,n,t){function r(e,n){if(!o)return!1;if(e!==o)return!1;if(!n)return!0;if(!i)return!1;for(var t=i.split("."),r=n.split("."),a=0;a<r.length;a++)if(r[a]!==t[a])return!1;return!0}var o=null,i=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var u=navigator.userAgent,f=u.match(a);f&&u.indexOf("Chrome")===-1&&u.indexOf("Chromium")===-1&&(o="Safari",i=f[1])}n.exports={agent:o,version:i,match:r}},{}],3:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],4:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],5:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=v(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){h[e]=v(e).concat(n)}function m(e,n){var t=h[e];if(t)for(var r=0;r<t.length;r++)t[r]===n&&t.splice(r,1)}function v(e){return h[e]||[]}function g(e){return p[e]=p[e]||o(t)}function w(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var h={},y={},b={on:l,addEventListener:l,removeEventListener:m,emit:t,get:g,listeners:v,context:n,buffer:w,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(3),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!E++){var e=x.info=NREUM.info,n=l.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+x.offset],null,"api");var t=l.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===l.readyState&&i()}function i(){f("mark",["domContent",a()+x.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-x.offset}var u=(new Date).getTime(),f=e("handle"),c=e(3),s=e("ee"),p=e(2),d=window,l=d.document,m="addEventListener",v="attachEvent",g=d.XMLHttpRequest,w=g&&g.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:g,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var h=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1099.min.js"},b=g&&w&&w[m]&&!/CriOS/.test(navigator.userAgent),x=n.exports={offset:u,now:a,origin:h,features:{},xhrWrappable:b,userAgent:p};e(1),l[m]?(l[m]("DOMContentLoaded",i,!1),d[m]("load",r,!1)):(l[v]("onreadystatechange",o),d[v]("onload",r)),f("mark",["firstbyte",u],null,"api");var E=0,O=e(5)},{}]},{},["loader"]);
+</script>
+<link href="//maps.googleapis.com" rel="dns-prefetch" />
+<link href="//fast.fonts.net" rel="dns-prefetch" />
+<link href="//js.maxmind.com" rel="dns-prefetch" />
+<link href="//s3.amazonaws.com" rel="dns-prefetch" />
+<link rel="shortcut icon" href="https://adult.prevnar13.com/sites/default/themes/custom/prevnar/favicon.ico" type="image/png" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+<meta name="description" content="See risks and benefits. Visit the official website for the vaccine PREVNAR 13® (Pneumococcal 13-valent Conjugate Vaccine (Diphtheria CRM197 Protein) for adults." />
+<meta name="generator" content="Drupal 7 (http://drupal.org)" />
+<link rel="canonical" href="https://adult.prevnar13.com/" />
+<link rel="shortlink" href="https://adult.prevnar13.com/" />
+<title>Safety Info|PREVNAR 13® (Pneumococcal 13-valent Conjugate Vaccine [Diphtheria CRM197 Protein])</title>
+<link type="text/css" rel="stylesheet" href="https://adult.prevnar13.com/sites/default/files/advagg_css/css__BJ6Ou6QsBRtnFTmxaakamOIS8n4QswDP2XnnZ1sxtaM__NBuvkP6eInGIkb1aJvUHx5PX79XApuxBDkk_77W5tYk__AnRaw0X-aZrXsWU7fjeFPMbtw2yF7MVlNEX4aDy2nz4.css" media="all" />
+<link type="text/css" rel="stylesheet" href="https://adult.prevnar13.com/sites/default/files/advagg_css/css__jjEdIwINPRs5BCpSK59_JjLiKBCs__QLmL3t8MvHU1k__3PWeSxBEp25JZfdB0q4a1THV5KGElJ3sZQngWGz2xDM__AnRaw0X-aZrXsWU7fjeFPMbtw2yF7MVlNEX4aDy2nz4.css" media="all" />
+<link type="text/css" rel="stylesheet" href="https://adult.prevnar13.com/sites/default/files/advagg_css/css__LZo694wdEChgRonky4uVMJHAx50W6id_EX1AhORz3do__J69t1HzPto2q18mfZZVgLnv4VNFgrPW5J3lZFmGhQXM__AnRaw0X-aZrXsWU7fjeFPMbtw2yF7MVlNEX4aDy2nz4.css" media="all" />
+<link type="text/css" rel="stylesheet" href="https://adult.prevnar13.com/sites/default/files/advagg_css/css__n_IvQbbbAecSuTMcSujtC7qLv_HdiSaYx0ACNdIEP4g__qg8ZxHoD75pBw97q9LvA58mX8NdtrO3jfy2-udx46Fo__AnRaw0X-aZrXsWU7fjeFPMbtw2yF7MVlNEX4aDy2nz4.css" media="all" />
+<link type="text/css" rel="stylesheet" href="https://adult.prevnar13.com/sites/default/files/advagg_css/css__fPIc7v08xHNTI2pWpkg8bu6qSi4fxpsLQkfM5GxKaMQ__UcMihliAkLOR-DaMePCrNUqOXJVgVuVdYBAegfIuCA4__AnRaw0X-aZrXsWU7fjeFPMbtw2yF7MVlNEX4aDy2nz4.css" media="all" />
+<link type="text/css" rel="stylesheet" href="https://adult.prevnar13.com/sites/default/files/advagg_css/css__CgmpvuwPpFMrxeQm13O4eS_lbNyWoMMWeGrVroWP6Vw__FYoFHOQTKnxDTvdf3ioB-e4cA6et1AmbEKodjBDRs0M__AnRaw0X-aZrXsWU7fjeFPMbtw2yF7MVlNEX4aDy2nz4.css" media="print" />
+</head>
+<body class="html front not-logged-in no-sidebars page-node page-node- page-node-15 node-type-prevnar i18n-en homepage preload" ><!--
+Start of DoubleClick Floodlight Tag: Please do not remove
+Activity name of this tag: Adult.Prevnar13.com_All Pages_Page View_Std_CV
+URL of the webpage where the tag is expected to be placed: http://Adult.prevnar13.com/ALL_PAGES
+This tag must be placed between the <body> and </body> tags, as close as possible to the opening tag.
+Creation Date: 10/16/2017
+-->
+<script type="text/javascript">
+var axel = Math.random() + "";
+var a = axel * 10000000000000;
+var titleNew = document.getElementsByTagName("title")[0].innerHTML;
+document.write('<iframe src="https://2684904.fls.doubleclick.net/activityi;src=2684904;type=adprvcsv;cat=u1pv;u1='+titleNew+';dc_lat=;dc_rdid=;tag_for_child_directed_treatment=;ord=' + a + '?" width="1" height="1" frameborder="0" style="display:none"></iframe>');
+</script>
+<noscript>
+<iframe src="https://2684904.fls.doubleclick.net/activityi;src=2684904;type=adprvcsv;cat=u1pv;u1='+titleNew+';dc_lat=;dc_rdid=;tag_for_child_directed_treatment=;ord=1;num=1?" width="1" height="1" frameborder="0" style="display:none"></iframe>
+</noscript>
+<!-- End of DoubleClick Floodlight Tag: Please do not remove -->
+<div id="skip-link">
+  <a href="#main-content" class="element-invisible element-focusable">Skip to main content</a>
+</div>
+  <div id="page-wrapper"><div id="page">
+<div id="header" class="without-secondary-menu"><div class="section clearfix">
+		<div class="site-logo">
+	  <a href="/" sc:linkname="global header|logo" title="Home" rel="home" id="logo">
+		<img src="https://adult.prevnar13.com/sites/default/themes/custom/prevnar/logo.png" alt="Home" />
+	  </a>  
+	</div>
+			<div id="name-and-slogan">
+							<div id="site-name">
+			<strong>
+			  <a href="/" title="Home" rel="home"><span>PREVNAR 13® (Pneumococcal 13-valent Conjugate Vaccine [Diphtheria CRM197 Protein])</span></a>
+			</strong>
+		  </div>
+							  </div> <!-- /#name-and-slogan -->
+	  <!-- FPI for mobile layout -->
+  <div class="mobile-fpi"><a href="http://labeling.pfizer.com/showlabeling.aspx?id=501" class="no-popup" target="_blank">Full Prescribing Information</a></div>
+  <!-- hamburger menu for mobile layout -->
+  <div class="mobile-menu toggle-menu">
+	<span class="toggle-icon"></span>
+	<span class="toggle-text">Menu</span>
+  </div>
+	<div class="region region-header">
+  <div id="block-menu-menu-top-header-menu" class="block block-menu">
+
+  
+<div class="content">
+  <ul class="menu"><li class="first leaf"><a href="/important-safety-information/nojs" class="isi ctools-use-modal">Important Safety Information</a></li>
+<li class="leaf"><a href="http://labeling.pfizer.com/showlabeling.aspx?id=501" class="external-link no-popup" target="_blank">Full Prescribing Information</a></li>
+<li class="leaf"><a href="/faq/nojs" class="faq ctools-use-modal">Frequently Asked Questions</a></li>
+<li class="leaf"><a href="/side-effect/nojs" class="sideeffect ctools-use-modal">Side Effects</a></li>
+<li class="leaf find-previnar-item"><a href="/prevnar-locator/nojs" class="prevnar-loc-link find_prevnar">Find Prevnar 13<sup>®</sup></a></li>
+<li class="last expanded more-drop-down"><a href="javascript: void(0);" class="drop-down-link no-popup">More PREVNAR 13<sup>&reg;</sup> Sites</a><ul class="menu"><li class="first expanded external-link-nonhcp"><a href="javascript: void(0);" class="nolink no-popup">FOR ADULTS</a><ul class="menu"><li class="first leaf"><a href="http://www.prevnar13adulto.com/" name="for adults" class="external-link external-link-nonhcp">Para Adultos</a></li>
+<li class="last leaf"><a href="https://www.pfizerpro.com/product/prevnar-13/adult" name="for adults" class="external-link external-link-hcp">Healthcare Professionals</a></li>
+</ul></li>
+<li class="last expanded external-link-nonhcp"><a href="javascript: void(0);" class="nolink no-popup">FOR INFANTS &amp; YOUNG CHILDREN</a><ul class="menu"><li class="first leaf"><a href="http://www.prevnar13vax.com/" name="for infants &amp; young children" class="external-link external-link-nonhcp">Parents</a></li>
+<li class="leaf"><a href="http://www.prevnar13espanol.com/" name="for infants &amp; young children" class="external-link external-link-nonhcp">Para Padres</a></li>
+<li class="last leaf"><a href="https://www1.pfizerpro.com/hcp/prevnar13-pediatric" name="for infants &amp; young children" class="external-link external-link-hcp">Healthcare Professionals</a></li>
+</ul></li>
+</ul></li>
+</ul>  </div>
+</div>
+<div id="block-menu-menu-header-menu" class="block block-menu">
+
+  
+<div class="content">
+  <ul class="menu"><li class="first leaf"><a href="/" class="active">Home</a></li>
+<li class="leaf"><a href="/about-pneumococcal-pneumonia" title="">About Pneumococcal Pneumonia</a></li>
+<li class="leaf"><a href="/about-prevnar13">About PREVNAR 13<sup>®</sup></a></li>
+<li class="leaf"><a href="/ask-your-doctor">Ask Your Doctor</a></li>
+<li class="last leaf"><a href="/prevnar-locator/nojs" title="Find Prevnar 13" class="prevnar-loc-link find_prevnar">Find PREVNAR 13<sup>®</sup></a></li>
+</ul>  </div>
+</div>
+<div id="block-pfe-custom-locator-pfe-locator" class="block block-pfe-custom-locator">
+
+  <h2><none></h2>
+
+<div class="content">
+  <a href="/prevnar-locator/nojs" class="ctools-use-modal " title="Find Prevnar 13">Find Prevnar 13</a>  </div>
+</div>
+<div id="block-block-16" class="block block-block">
+
+  
+<div class="content">
+  <a href="mobile-popup/nojs" class="ctools-use-modal ctools-modal-modal-popup-small" id="cookie-popup" >click news aa</a>  </div>
+</div>
+</div>
+		</div></div> <!-- /.section, /#header -->
+	<div id="main-wrapper" class="clearfix"><div id="main" class="clearfix">
+		  <div id="content" class="column"><div class="section">
+		  <a id="main-content"></a>
+				  <h1 class="title" id="page-title">
+		<span class="center-content">Safety Info</span>        </h1>
+						<div class="tabs">
+				</div>
+						<div class="region region-content">
+  <div id="block-system-main" class="block block-system">
+
+  
+<div class="content">
+  <div id="node-15" class="node node-prevnar clearfix">
+		<div class="content clearfix">
+  
+<div class="paragraphs-items paragraphs-items-field-bundle paragraphs-items-field-bundle-full paragraphs-items-full">
+<div class="field field-name-field-bundle field-type-paragraphs field-label-hidden"><div class="field-items"><div class="field-item even"><div class="entity entity-paragraphs-item paragraphs-item-banner-image">
+<div class="content">
+  <div class="field field-name-field-title field-type-text field-label-hidden"><div class="field-items"><div class="field-item even"><p class="ani-home-title">Even healthy adults <br>65+ are at risk.<span class="ani-subtitle animate">One dose of the PREVNAR 13<sup>®</sup><br class="mob"> vaccine can <br>help protect you from<br class="mob"> pneumococcal pneumonia.</span></p></div></div></div><div class="field field-name-field-banner-image field-type-image field-label-above"><div class="field-label">Banner Image:&nbsp;</div><div class="field-items"><div class="field-item even"><img src="https://adult.prevnar13.com/sites/default/files/home-hero_0_0.jpg" width="1366" height="616" alt="" /></div></div></div><div class="field field-name-field-mobile-banner-image field-type-image field-label-above"><div class="field-label">Mobile Banner Image:&nbsp;</div><div class="field-items"><div class="field-item even"><img src="https://adult.prevnar13.com/sites/default/files/home-page-banner-mobile-1_0_0.png" width="320" height="519" alt="" /></div></div></div>  </div>
+</div>
+</div><div class="field-item odd"><div class="entity entity-paragraphs-item paragraphs-item-basic-bundle">
+<div class="content">
+  <div class="field field-name-field-basic-body field-type-text-long field-label-hidden"><div class="field-items"><div class="field-item even"><div class="full-width-container">
+  <div class="callout-container">
+	  <div class="callout-wrapper">
+		  <div class="callout callout_blue">
+		  <h4>About Pneumococcal Pneumonia</h4>
+
+		  <p>Pneumococcal pneumonia is a potentially serious bacterial lung disease.<a href="/about-pneumococcal-Pneumonia" sc:linkname="about pneumococcal pneumonia | mid menu | learn more" >Learn more</a></p>
+		  <a class="mobile-link" href="/about-pneumococcal-Pneumonia"></a>
+		  </div>
+
+		  <div class="callout callout_pink">
+		  <h4>About PREVNAR 13<sup>®</sup></h4>
+
+		  <p>One dose of <nobr>PREVNAR 13<sup>®</sup></nobr> <br>can help protect you.<a href="/about-prevnar13" sc:linkname="about PREVNAR 13 | mid menu | learn more" >Learn more</a></p>
+		  <a class="mobile-link" href="/about-prevnar13"></a>
+		  </div>
+
+		  <div class="callout callout_orange">
+		  <h4>Ask Your Doctor</h4>
+
+		  <p>Ask if <nobr>PREVNAR 13<sup>®</sup></nobr> <br>is right for you. This<br> guide can help.<a href="/ask-your-doctor" sc:linkname="ask your doctor | mid menu | learn more">Learn more</a></p>
+		  <a class="mobile-link" href="/ask-your-doctor"></a>
+		  </div>
+	  </div>
+  </div>
+</div></div></div></div>  </div>
+</div>
+</div><div class="field-item even"><div class="entity entity-paragraphs-item paragraphs-item-basic-bundle">
+<div class="content">
+  <div class="field field-name-field-basic-body field-type-text-long field-label-hidden"><div class="field-items"><div class="field-item even"><div class="front-down-arrow mob"></div>
+<div class="blue-container">
+<div class="find-out-more-container">
+<div class="find-out-more-wrapper">
+<p>If you're 65 or older, PREVNAR 13<sup>®</sup> may be available at no extra cost to you.<a class="button-link find-out-more-link" href="/ask-your-doctor#out-of-pocket-cost" sc:linkname="home | content | find out more">Find out more</a></p>
+</div>
+</div>
+</div>
+</div></div></div>  </div>
+</div>
+</div></div></div></div>
+<div class="field field-name-field-body-class field-type-text field-label-above"><div class="field-label">Body class:&nbsp;</div><div class="field-items"><div class="field-item even">homepage</div></div></div>  </div>
+  </div>  </div>
+</div>
+<div id="block-pfe-responsive-pop-up-normal-pop-up" class="block block-pfe-responsive-pop-up">
+
+  
+<div class="content">
+  <div class='responsive-pop-up'><div class='overlay-block popcancel'></div><div class='text-block'><div class="pop-up-text">
+<div class="pop-cont">
+<h2 class="header">You are now leaving adult.prevnar13.com</h2>
+<p class="non-hcp-content">Links to other websites are provided as a convenience to the viewer. Pfizer accepts no responsibility for the content of linked sites.</p>
+<p class="hcp-content">The information provided in this website is intended only for healthcare professionals in the United States. The products discussed may have different product labeling in different countries.</p>
+<div class="groupbtn">
+<div class="proceedbtn"><a target="_blank" class="pop-ok big blue box-shadow">Continue</a></div>
+</div>
+</div>
+<span class="pop-close"><a href="javacript:void(0);" class="popcancel"><img src="https://adult.prevnar13.com/sites\default\themes\custom\prevnar\images\popup-closebtn.png"></a></span>
+</div></div></div>  </div>
+</div>
+<div id="block-pfe-prevnar-pfe-sideeffect" class="block block-pfe-prevnar">
+
+  
+<div class="content">
+  <div class="Sideeffect-content"><div class="desk">
+  <div class="sideeffect-header">
+	<h2>Information about the side effects of the PREVNAR 13<sup>®</sup> vaccine.</h2>
+	<p>Because PREVNAR 13<sup>®</sup> is given by injection, some of the most common side effects reported in clinical trials were injection-site reactions: redness, swelling, pain at the injection site, and limitation of arm movement.</p>
+  </div>
+  <div class="sideeffect-body">
+	<p class="list-para">Other side effects include: </p>
+	<div>
+	  <ul class="left-section">
+		<li> fatigue</li>
+		<li> muscle pain</li>
+		<li>joint pain</li>
+		<li>chills</li>
+		<li>headache</li>
+	  </ul>
+	  <ul class="right-section">
+		<li>vomiting</li>
+		<li>decreased appetite</li>
+		<li>rash</li>
+		<li>fever</li>
+	  </ul>
+	</div>
+	<p class="sec-lastpara">PREVNAR 13<sup>®</sup> should not be given to anyone with a severe allergic reaction to any component of PREVNAR 13<sup>®</sup> or any diphtheria toxoid–containing vaccine. Adults with weakened immune systems (eg HIV infection, leukemia) may have a reduced immune response.</p>
+	<p class="italic-para">Patients should always ask their doctors for medical advice about adverse events. You are encouraged to report negative side effects of vaccines to the US Food and Drug Administration (FDA) and the Centers for Disease Control and Prevention (CDC). Visit  <a  class="external-link external-link-nonhcp" href="http://www.vaers.hhs.gov" sc:linkname="side effect | exit | www.vaers.hhs.gov" >http://www.vaers.hhs.gov</a> or call <span class="telno desk">1-800-822-7967</span><a class="telno no-popup mob" href="tel:18008227967" sc:linkname="global footer | phone | 18008227967" >1-800-822-7967</a>. </p>
+  </div>
+</div>
+<div class="mob">
+  <div class="sideeffect-body">
+<h2>Information about the side effects of the PREVNAR 13<sup>®</sup> vaccine.</h2>
+	<p>Because PREVNAR 13<sup>®</sup> is given by injection, some of the most common side effects reported in clinical trials were injection-site reactions: redness, swelling, pain at the injection site, and limitation of arm movement.</p>
+
+	<p class="list-para">Other side effects include: </p>
+	<div>
+	  <ul class="left-section">
+		<li> fatigue</li>
+		<li> muscle pain</li>
+		<li>joint pain</li>
+		<li>chills</li>
+		<li>headache</li>
+	  </ul>
+	  <ul class="right-section">
+		<li>vomiting</li>
+		<li>decreased appetite</li>
+		<li>rash</li>
+		<li>fever</li>
+	  </ul>
+	</div>
+	<p class="sec-lastpara">PREVNAR 13<sup>®</sup> should not be given to anyone with a severe allergic reaction to any component of PREVNAR 13<sup>®</sup> or any diphtheria toxoid–containing vaccine. Adults with weakened immune systems (eg HIV infection, leukemia) may have
+	  a reduced immune response.</p>
+
+	<p class="italic-para">Patients should always ask their doctors for medical advice about adverse events. You are encouraged to report negative side effects of vaccines to the US Food and Drug Administration (FDA) and the Centers for Disease Control and Prevention (CDC). Visit  <a  class="external-link external-link-nonhcp" href="http://www.vaers.hhs.gov" sc:linkname="side effect | exit | www.vaers.hhs.gov" >http://www.vaers.hhs.gov</a> or call <span class="telno desk"><nobr>1-800-822-7967</nobr></span><a class="telno no-popup mob" href="tel:18008227967" sc:linkname="global footer | phone | 18008227967" ><nobr>1-800-822-7967</nobr></a>.</p>
+  </div>
+</div> </div>
+
+
+
+</div>
+</div>
+</div>
+		</div></div> <!-- /.section, /#content -->
+	</div></div> <!-- /#main, /#main-wrapper -->
+
+<div id="footer-wrapper"><div class="section">
+		<div id="footer-columns" class="clearfix">
+				<div class="region region-footer-secondcolumn">
+  <div id="block-pfe-prevnar-pfe-isi" class="block block-pfe-prevnar">
+
+  
+<div class="content">
+  <div class="isi-content"><div class="desk">
+  <div class="close-btn"></div>
+  <div class="isi-body">
+	  
+	  <h2>IMPORTANT SAFETY INFORMATION <span class="mob-only">& INDICATIONS FOR <nobr>PREVNAR 13<sup>®</sup></nobr></span></h2>
+	  <div class="isi-header">
+	  
+	  
+
+
+		<p class="isi-mob-only">IMPORTANT SAFETY INFORMATION</p>
+		<ul>
+		  <li>Prevnar 13<sup>®</sup> should not be given to anyone with a history of severe allergic reaction to any component of <nobr>Prevnar 13<sup>®</sup></nobr> or any diphtheria <nobr>toxoid–containing</nobr> vaccine</li>
+		  <li>Adults with weakened immune systems (eg, HIV infection, leukemia) may have a reduced immune response</li>
+		  <li>In adults, the most common side effects were pain, redness, and swelling at the injection site, limitation of arm movement, fatigue, headache, muscle pain, joint pain, decreased appetite, vomiting, fever, chills, and rash</li>
+		  <li>Ask your healthcare provider about the risks and benefits of <nobr>Prevnar 13<sup>®</sup>.</nobr> Only a healthcare provider can decide if <nobr>Prevnar 13<sup>®</sup></nobr> is right for you</li>
+		</ul>
+		<div class="last-para-isi">
+		  <p><em>Patients should always ask their doctors for medical advice about adverse events. You are encouraged to report negative side effects of vaccines to the US Food and Drug Administration (FDA) and the Centers for Disease Control and Prevention (CDC). Visit <a class="external-link external-link-nonhcp gov-link external" href="https://www.vaers.hhs.gov" sc:linkname="isi | exit | www.vaers.hhs.gov">http://www.vaers.hhs.gov</a> or call <span class="telno desk">1-800-822-7967</span><a class="telno no-popup mob" href="tel:18008227967" sc:linkname="isi | phone | 18008227967">1-800-822-7967</a>.</em></p>
+		  <p>Please see full <a href="http://labeling.pfizer.com/showlabeling.aspx?id=501" target="_blank" class="external-link gov-link no-popup">Prescribing Information</a>.</p>
+		</div>
+	</div>
+
+
+
+	<div id="isi">
+	  <div class="isi-wrap">
+		<h2 class="mob-diff">INDICATIONS FOR <nobr>PREVNAR 13<sup>®</sup></nobr></h2>
+		
+		<ul>
+		  <li>Prevnar 13<sup>®</sup> is a vaccine approved for adults 18 years of age and older for the prevention of pneumococcal pneumonia and invasive disease caused by 13 <nobr><i>Streptococcus pneumoniae</i></nobr> strains (1, 3, 4, 5, 6A, 6B, <span class="special-line">7F, 9V, 14, 18C, 19A,<br> 19F, and 23F)</span></li>
+		  <li>Prevnar 13<sup>®</sup> is not 100% effective and will only help protect against the 13 strains included in the vaccine</li>
+		</ul>
+	  </div>
+	</div>
+
+
+
+
+  </div>
+</div>
+<div class="mob">
+  <div class="close-btn"></div>
+  <h2>IMPORTANT SAFETY INFORMATION <span class="mob-only"> & INDICATIONS FOR PREVNAR 13<sup>®</sup></span></h2>
+  <p class="scroll-isi">Scroll for Important Safety Information</p>
+  <div class="isi-body">
+	  
+	<p class="isi-mob-only">IMPORTANT SAFETY INFORMATION</p>
+	
+		<ul>
+		  <li>Prevnar 13<sup>®</sup> should not be given to anyone with a history of severe allergic reaction to any component of Prevnar 13<sup>®</sup> or any diphtheria toxoid–containing vaccine</li>
+		  <li>Adults with weakened immune systems (eg, HIV infection, leukemia) may have a reduced immune response</li>
+		  <li>In adults, the most common side effects were pain, redness, and swelling at the injection site, limitation of arm movement, fatigue, headache, muscle pain, joint pain, decreased appetite, vomiting, fever, chills, and rash</li>
+		  <li>Ask your healthcare provider about the risks and benefits of Prevnar 13<sup>®</sup>. Only a healthcare provider can decide if Prevnar 13<sup>®</sup> is right for you</li>
+		</ul>
+		<div class="last-para-isi">
+		  <p><em>Patients should always ask their doctors for medical advice about adverse events. You are encouraged to report negative side effects of vaccines to the US Food and Drug Administration (FDA) and the Centers for Disease Control and Prevention (CDC). Visit <a class="external-link external-link-nonhcp gov-link external" href="https://www.vaers.hhs.gov" sc:linkname="isi | exit | www.vaers.hhs.gov">http://www.vaers.hhs.gov</a> or call <span class="telno desk">1-800-822-7967</span><a class="telno no-popup mob" href="tel:18008227967" sc:linkname="isi | phone | 18008227967">1-800-822-7967</a>.</em></p>
+		  <p>Please see full <a href="http://labeling.pfizer.com/showlabeling.aspx?id=501" target="_blank" class="external-link gov-link no-popup">Prescribing Information</a>.</p>
+		</div>
+
+
+
+	<div id="isi">
+	  
+
+
+	  <div class="isi-wrap">
+		<h2 class="mob-diff">INDICATIONS FOR PREVNAR 13<sup>®</sup></h2>
+		<ul>
+	  <li>Prevnar 13<sup>®</sup> is a vaccine approved for adults 18 years of age and older for the prevention of pneumococcal pneumonia and invasive disease caused by 13 <i>Streptococcus pneumoniae</i> strains (1, 3, 4, 5, 6A, 6B, <span class="special-line">7F, 9V, 14, 18C, 19A, 19F, and 23F)</span></li>
+	  <li>Prevnar 13<sup>®</sup> is not 100% effective and will only help protect against the 13 strains included in the vaccine</li>
+	</ul>
+
+	  </div>
+
+
+
+	</div>
+  </div>
+
+
+
+</div> </div>
+
+
+
+
+
+</div>
+</div>
+</div>
+							 <div id="footer" class="clearfix">
+		<div class="region region-footer">
+  <div id="block-block-1" class="block block-block bottom-footer">
+
+  
+<div class="content">
+  <div class="footerisi">
+<div class="close-btn"></div>
+<h2 class="heading"><span class="mob-only"> Important Safety Information & </span> INDICATIONS for <nobr>Prevnar 13<sup>®</sup></nobr> </h2>
+<div class="isi-inside-wrap">
+  <p class="isi-mob-only">Important Safety Information</p>
+		  <ul>
+		<li>Prevnar 13<sup>®</sup> should not be given to anyone with a history of severe allergic reaction to any component of <nobr>Prevnar 13<sup>®</sup></nobr> or any diphtheria <nobr>toxoid–containing</nobr> vaccine</li>
+		<li>Adults with weakened immune systems (eg, HIV infection, leukemia) may have a reduced immune response</li>
+		<li>In adults, the most common side effects were pain, redness, and swelling at the injection site, limitation of arm movement, fatigue, headache, muscle pain, joint pain, decreased appetite, vomiting, fever, chills, and rash</li>
+		<li>Ask your healthcare provider about the risks and benefits of <nobr>Prevnar 13<sup>®</sup>.</nobr> Only a healthcare provider can decide if <nobr>Prevnar 13<sup>®</sup></nobr> is right for you</li>
+	  </ul>
+<p class="first-para mob">Patients should always ask their doctors for medical advice about adverse events. You are encouraged to report negative side effects of vaccines to the US Food and Drug Administration (FDA) and the Centers for Disease Control and Prevention (CDC). Visit
+  <a class="external-link external-link-nonhcp gov-link" href="https://www.vaers.hhs.gov" sc:linkname="global footer | exit | www.vaers.hhs.gov">http://www.vaers.hhs.gov</a> or call <span class="telno desk">1-800-822-7967</span><a class="telno no-popup mob"
+  href="tel:18008227967" sc:linkname="global footer | phone | 18008227967"><nobr>1-800-822-7967</nobr></a>.</p>
+  <div id="isi">
+	<h2 class="mob-diff">INDICATIONS for PREVNAR 13<sup>®</sup></h2>
+	<div class="isi-wrap">
+	  
+			  <ul>
+	<li>Prevnar 13<sup>®</sup> is a vaccine approved for adults 18 years of age and older for the prevention of pneumococcal pneumonia and invasive disease caused by 13 <span>Streptococcus pneumoniae</span> strains (1, 3, 4, 5, 6A, 6B, 7F, 9V, 14, 18C, 19A, 19F, and
+	  23F)</li>
+	<li>Prevnar 13<sup>®</sup> is not 100% effective and will only help protect against the 13 strains included in the vaccine</li>
+  </ul>
+	</div>
+  </div>
+</div>
+</div>
+<div class="foot-wrap">
+<p class="share-btn-footer"><a href="share/nojs" class="share-btn share-email-btn ctools-use-modal">Share <img class="only-mobile" src="https://adult.prevnar13.com/sites/default/themes/custom/prevnar/images/mail-icon.png"></a></p>
+<p class="first-para desk">Patients should always ask their doctors for medical advice about adverse events. You are encouraged to report negative side effects of vaccines to the US Food and Drug Administration (FDA) and the Centers for Disease Control and Prevention (CDC). Visit
+  <a class="external-link external-link-nonhcp gov-link" href="https://www.vaers.hhs.gov" sc:linkname="global footer | exit | www.vaers.hhs.gov">http://www.vaers.hhs.gov</a> or call <span class="telno desk">1-800-822-7967</span><a class="telno no-popup mob"
+  href="tel:18008227967" sc:linkname="global footer | phone | 18008227967"><nobr>1-800-822-7967</nobr></a>.</p>
+
+<div class="green-box">
+  <a href="http://www.PfizerRxPathways.com" class="external-link external-link-nonhcp" sc:linkname="global footer | exit | pfizerrxpathways"><img class="desk lazy" src="https://adult.prevnar13.com/sites/default/themes/custom/prevnar/images/spacer.png" alt="green-box"  data-src="https://adult.prevnar13.com/sites/default/themes/custom/prevnar/images/green-box-foot-desk.png" /></a>
+  <a href="http://www.PfizerRxPathways.com" class="external-link external-link-nonhcp" sc:linkname="global footer | exit | pfizerrxpathways"> <img class="mob lazy"  src="https://adult.prevnar13.com/sites/default/themes/custom/prevnar/images/spacer.png" alt="green-box" data-src="https://adult.prevnar13.com/sites/default/themes/custom/prevnar/images/green-box-foot-mob.png" /></a>
+  <!-- <div class="left">
+<h1>In need of prescription assistance?</h1>
+
+<p>Pfizer RxPathways<sup>®</sup> connects eligible patients to assistance programs that offer insurance support, co-pay assistance, and medicines for free or at a savings.</p>
+</div>
+
+<div class="right">Learn more by visiting <a href="www.PfizerRxPathways.com">www.PfizerRxPathways.com</a> or calling 1-844-989-PATH (7284).<img src="/sites/default/themes/custom/prevnar/images/footer-learn.jpg" /></div> --></div>
+
+<p class="below-logo-text"><span class="footer-logo"> <a href="http://www.pfizer.com" target="_blank" sc:linkname="global footer | pfizer logo" class="no-popup"><img class="foot-logo lazy" src="https://adult.prevnar13.com/sites/default/themes/custom/prevnar/images/spacer.png" alt="pfizer-logo" data-src="https://adult.prevnar13.com/sites/default/themes/custom/prevnar/images/foot-pfizer-logo.png" /></a></span>
+  <span
+  class="wyeth">PREVNAR 13 is a registered trademark of Wyeth LLC.
+	<br>Manufactured by Wyeth Pharmaceuticals Inc. <br class="mob">Marketed by Pfizer Inc.</span> <span class="clear">PP-PNA-USA-3139-01</span> <span class="year">© 2018 Pfizer Inc. All rights reserved. July 2018 <br/> Please read our <a class="pink no-popup privacy"   target="_blank" href="http://www.pfizer.com/general/privacy" sc:linkname="global footer | navigation | privacy policy" >Privacy Policy</a> and <a class="pink no-popup terms" href="http://www.pfizer.com/general/terms"  target="_blank"  sc:linkname="global footer | navigation | terms of use" >Terms of Use</a>.</span>
+	<a id="_bapw-link" href="//info.evidon.com/pub_info/2622?v=1&nt=0&nw=false" target="_blank" class="no-popup" sc:linkname="global footer | link | adchoice"><img class="adchoice lazy" src="https://adult.prevnar13.com/sites/default/themes/custom/prevnar/images/spacer.png" alt="adchoices" data-src="https://adult.prevnar13.com/sites/default/themes/custom/prevnar/images/adchoices.png" /></a>
+</p>
+<div class="bottom-foot-text">
+  <p>The product information provided in this site is intended only for residents of the United States.
+	<br>The products discussed in this site may have different product labeling in different countries.</p>
+  <p>The health information in this site is provided for educational purposes only and is not intended to
+	<br>replace discussions with a healthcare provider. All decisions regarding patient care must be
+	<br>made with a healthcare provider, considering the unique characteristics of the patient.</p>
+</div>
+</div>  </div>
+</div>
+<div id="block-views-faq-block" class="block block-views">
+
+  
+<div class="content">
+  <div class="view view-faq view-id-faq view-display-id-block view-dom-id-57b38d9ddbd8d0e043f20ff2e8f4b661">
+		  <div class="view-header">
+	<h2>Frequently Asked Questions (FAQs) <span class="desk">about pneumococcal pneumonia and the PREVNAR 13<sup>®</sup> vaccine.</span></h2>    </div>
+
+
+
+	<div class="view-content">
+	  <div class="views-row views-row-1 views-row-odd views-row-first">
+	
+<div class="views-field views-field-field-faq-title">        <div class="field-content">What is pneumococcal pneumonia? </div>  </div>  
+<div class="views-field views-field-body">        <div class="field-content"><p>Pneumococcal pneumonia is a potentially serious disease caused by <i>Streptococcus pneumoniae</i>, a common bacteria. Many people dismiss pneumonia as an illness that only the elderly or sick people get in the hospital. That’s not always true. Pneumococcal pneumonia can strike anywhere, anytime. Even if you’re as young as 65 and take good care of yourself, you still may be at increased risk.</p>
+</div>  </div>  </div>
+<div class="views-row views-row-2 views-row-even">
+	
+<div class="views-field views-field-field-faq-title">        <div class="field-content">How serious is it? 	</div>  </div>  
+<div class="views-field views-field-body">        <div class="field-content"><p>Pneumococcal pneumonia is not a cold or the flu. It is a bacterial lung disease, while the flu and cold are caused by viruses. Symptoms can come on quickly and can include cough, fatigue, high fever, shaking chills, and chest pain with difficulty breathing.</p>
+</div>  </div>  </div>
+<div class="views-row views-row-3 views-row-odd">
+	
+<div class="views-field views-field-field-faq-title">        <div class="field-content">Who’s at increased risk for pneumococcal pneumonia?</div>  </div>  
+<div class="views-field views-field-body">        <div class="field-content">Even active, healthy adults 65 and older are at increased risk for pneumococcal pneumonia.</div>  </div>  </div>
+<div class="views-row views-row-4 views-row-even">
+	
+<div class="views-field views-field-field-faq-title">        <div class="field-content">Is there anything I can do to prevent it?</div>  </div>  
+<div class="views-field views-field-body">        <div class="field-content">If you’re 65 or older, vaccination is an important way to help protect against pneumococcal pneumonia. Even if you have already been vaccinated with a different pneumococcal vaccine, PREVNAR 13<sup>®</sup> may help provide additional protection. Immune response may be lower if given within one year after another vaccine for pneumococcal pneumonia. Ask your doctor or pharmacist if it makes sense for you. </div>  </div>  </div>
+<div class="views-row views-row-5 views-row-odd">
+	
+<div class="views-field views-field-field-faq-title">        <div class="field-content">What is PREVNAR 13<sup>®</sup>?</div>  </div>  
+<div class="views-field views-field-body">        <div class="field-content">PREVNAR 13<sup>®</sup> is a vaccine approved for adults for the prevention of pneumococcal pneumonia and invasive disease caused by the 13 <em>Streptococcus pneumoniae</em> strains included in the vaccine.</div>  </div>  </div>
+<div class="views-row views-row-6 views-row-even">
+	
+<div class="views-field views-field-field-faq-title">        <div class="field-content">Are there side effects? </div>  </div>  
+<div class="views-field views-field-body">        <div class="field-content">Because PREVNAR 13<sup>®</sup> is given by injection, some of the most common side effects reported in clinical trials were injection site reactions such as redness, swelling, pain at the injection site, and limitation of arm movement. Some people reported systemic side effects, including fatigue, headache, muscle pain, joint pain, decreased appetite, vomiting, fever, chills, and rash. PREVNAR 13<sup>®</sup> should not be given to anyone with a severe allergic reaction to any component of PREVNAR 13<sup>®</sup> or any diphtheria toxoid–containing vaccine. Please see additional <a href="/important-safety-information/nojs" class="pink ctools-use-modal isi" sc:linkname ="faq | are there side effects | important safety information" >Important Safety Information</a>.</div>  </div>  </div>
+<div class="views-row views-row-7 views-row-odd">
+	
+<div class="views-field views-field-field-faq-title">        <div class="field-content">Who is PREVNAR 13<sup>®</sup> for? </div>  </div>  
+<div class="views-field views-field-body">        <div class="field-content">PREVNAR 13<sup>®</sup> is approved for use in adults. Talk to your doctor or pharmacist to see if PREVNAR 13<sup>®</sup> is right for you. </div>  </div>  </div>
+<div class="views-row views-row-8 views-row-even">
+	
+<div class="views-field views-field-field-faq-title">        <div class="field-content">The CDC recommends <nobr>PREVNAR 13<sup>®</sup></nobr> for which adults?</div>  </div>  
+<div class="views-field views-field-body">        <div class="field-content"><ul>
+  <li>All adults 65 years or older</li>
+  <li>Adults 19-64 years old with certain chronic medical conditions</li>
+</ul></div>  </div>  </div>
+<div class="views-row views-row-9 views-row-odd views-row-last">
+	
+<div class="views-field views-field-field-faq-title">        <div class="field-content">Who should not take PREVNAR 13<sup>®</sup>? </div>  </div>  
+<div class="views-field views-field-body">        <div class="field-content">PREVNAR 13<sup>®</sup> should not be given to anyone with a history of severe allergic reaction to any component of PREVNAR 13<sup>®</sup> or any diphtheria toxoid–containing vaccine.</div>  </div>  </div>
+  </div>
+
+
+
+
+
+
+</div>  </div>
+</div>
+<div id="block-block-21" class="block block-block">
+
+  
+<div class="content">
+  <style>
+.about-prevnar-video-wrapper .vjs-poster {
+  background-size: cover;
+}
+</style>  </div>
+</div>
+</div>
+	</div> <!-- /#footer -->
+		</div> <!-- /#footer-columns -->
+	 
+</div></div> <!-- /.section, /#footer-wrapper -->
+</div></div> <!-- /#page, /#page-wrapper -->  <script type="text/javascript" src="https://adult.prevnar13.com/sites/default/files/advagg_js/js__dU859nniAHOO3ZZ49DZUXr5Frl9T3QSa81hYdDf9Uas__LOGJbIpGkynalCSfcR1h34ImWYBGTa_dPChPTpArKqg__AnRaw0X-aZrXsWU7fjeFPMbtw2yF7MVlNEX4aDy2nz4.js"></script>
+<script type="text/javascript" src="https://adult.prevnar13.com/sites/default/files/advagg_js/js__9gc_6zAARe0kThCL1GrSdURHIVh2HaoL5GvN3mDRvfU__bO5hXLCLEaHGDI_iExUTcMwpMYjm3RqhdVOyMj38jFs__AnRaw0X-aZrXsWU7fjeFPMbtw2yF7MVlNEX4aDy2nz4.js"></script>
+<script type="text/javascript" src="https://adult.prevnar13.com/sites/default/files/advagg_js/js__1aT91Stx9cezT__xn3Mg8E94SeUoP4vVNnNwHHbtHj4__rC98FdXTF4UNbZEVVkB27xyCif7GxIq0F-9QGCkbxeg__AnRaw0X-aZrXsWU7fjeFPMbtw2yF7MVlNEX4aDy2nz4.js"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+	// close script tag for SecKit protection
+	//--><!]]>
+	</script>
+	<script type="text/javascript" src="https://adult.prevnar13.com/sites/all/modules/security/seckit/js/seckit.document_write.js"></script>
+	<link type="text/css" rel="stylesheet" id="seckit-clickjacking-no-body" media="all" href="https://adult.prevnar13.com/sites/all/modules/security/seckit/css/seckit.no_body.css" />
+	<!-- stop SecKit protection -->
+	<noscript>
+	<link type="text/css" rel="stylesheet" id="seckit-clickjacking-noscript-tag" media="all" href="https://adult.prevnar13.com/sites/all/modules/security/seckit/css/seckit.noscript_tag.css" />
+	<div id="seckit-noscript-tag">
+	  Enable JavaScript to visit this website.
+	</div>
+	</noscript>
+	<script type="text/javascript">
+	<!--//--><![CDATA[//><!--
+	// open script tag to avoid syntax errors
+//--><!]]>
+</script>
+<script type="text/javascript" src="https://adult.prevnar13.com/sites/default/files/advagg_js/js__50z5HuLNF3_-CANtyqyNwnuYJkh-OBOvz1t2WvlZV4U__jJzYk10vR9luQOiVAMy-IQurbhHU1qnI8pP8D9Ri4VA__AnRaw0X-aZrXsWU7fjeFPMbtw2yF7MVlNEX4aDy2nz4.js"></script>
+<script type="text/javascript" src="//js.maxmind.com/js/apis/geoip2/v2.1/geoip2.js"></script>
+<script type="text/javascript" src="https://adult.prevnar13.com/sites/default/files/advagg_js/js__aifZoRrozaKlOvkcMDLxapOlrDikGQzmHKQCBcP-myM__FcE6z6igH7ZFpxxhfk67TQUk1bCDOG8S3dPevTsDFyU__AnRaw0X-aZrXsWU7fjeFPMbtw2yF7MVlNEX4aDy2nz4.js"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+jQuery.extend(Drupal.settings, {
+	"basePath":"\/",
+	"pathPrefix":"",
+	"ajaxPageState":{
+		"theme":"prevnar",
+		"theme_token":"ppJbBgcgD5dmCBKq42MN4B4RrtyqUjGjb3HrXa0P9OQ",
+		"jquery_version":"1.10",
+		"css":{
+			"modules\/system\/system.base.css":1,
+			"modules\/system\/system.menus.css":1,
+			"modules\/system\/system.messages.css":1,
+			"modules\/system\/system.theme.css":1,
+			"misc\/ui\/jquery.ui.core.css":1,
+			"misc\/ui\/jquery.ui.theme.css":1,
+			"sites\/all\/modules\/contrib\/deploy\/css\/deploy.css":1,
+			"modules\/field\/theme\/field.css":1,
+			"modules\/node\/node.css":1,
+			"sites\/default\/modules\/custom\/pfe_responsive_pop_up\/css\/responsive_pop_up.css":1,
+			"modules\/user\/user.css":1,"sites\/all\/modules\/contrib\/views\/css\/views.css":1,
+			"sites\/all\/modules\/contrib\/ctools\/css\/ctools.css":1,
+			"sites\/all\/modules\/contrib\/ctools\/css\/modal.css":1,
+			"sites\/default\/themes\/custom\/prevnar\/css\/jquery.mCustomScrollbar_min.css":1,
+			"sites\/default\/themes\/custom\/prevnar\/css\/jquery-ui.css":1,
+			"sites\/default\/themes\/custom\/prevnar\/css\/style.css":1,
+			"sites\/default\/themes\/custom\/prevnar\/css\/animations.css":1,
+			"sites\/default\/themes\/custom\/prevnar\/css\/print.css":1
+		},
+		"js":{
+			"sites\/default\/themes\/custom\/prevnar\/js\/components\/inputmask\/jquery.mask.js":1,
+			"sites\/default\/themes\/custom\/prevnar\/js\/components\/scrollbar\/jquery.mCustomScrollbar.min.js":1,
+			"sites\/default\/themes\/custom\/prevnar\/js\/components\/scrollbar\/jquery.mousewheel.min.js":1,
+			"sites\/default\/themes\/custom\/prevnar\/js\/jquery-scrollto.js":1,
+			"sites\/all\/modules\/contrib\/jquery_update\/replace\/jquery\/1.10\/jquery.min.js":1,
+			"misc\/jquery.once.js":1,
+			"misc\/drupal.js":1,
+			"sites\/all\/modules\/contrib\/jquery_update\/replace\/ui\/ui\/minified\/jquery.ui.core.min.js":1,
+			"sites\/all\/modules\/contrib\/jquery_update\/replace\/ui\/external\/jquery.cookie.js":1,"sites\/all\/modules\/contrib\/jquery_update\/replace\/misc\/jquery.form.min.js":1,
+			"misc\/ajax.js":1,
+			"sites\/all\/modules\/contrib\/jquery_update\/js\/jquery_update.js":1,
+			"sites\/default\/modules\/custom\/pfe_responsive_pop_up\/js\/responsive_pop_up.js":1,
+			"misc\/progress.js":1,"sites\/all\/modules\/contrib\/ctools\/js\/modal.js":1,
+			"\/\/fast.fonts.net\/jsapi\/a2b735f9-98aa-4ba1-9f7e-49cdbd99f3ff.js":1,
+			"https:\/\/maps.googleapis.com\/maps\/api\/js?libraries=places\u0026key=AIzaSyC87EyyAYKLI706yAqky3fXy7zMDcPtb5s":1,
+			"\/\/js.maxmind.com\/js\/apis\/geoip2\/v2.1\/geoip2.js":1,
+			"sites\/default\/themes\/custom\/prevnar\/js\/jquery-ui.js":1,
+			"sites\/default\/themes\/custom\/prevnar\/js\/components\/detection\/detect-breakpoints.js":1,
+			"sites\/default\/themes\/custom\/prevnar\/js\/components\/detection\/detect-device.js":1,"sites\/default\/themes\/custom\/prevnar\/js\/components\/resize\/smartresize-debouncing.js":1,
+			"sites\/default\/themes\/custom\/prevnar\/js\/components\/isi\/one_third.js":1,
+			"sites\/default\/themes\/custom\/prevnar\/js\/css_browser_selector.js":1,"sites\/default\/themes\/custom\/prevnar\/js\/script.js":1,
+			"sites\/default\/themes\/custom\/prevnar\/js\/jquery.uniform.js":1,
+			"sites\/default\/themes\/custom\/prevnar\/js\/analytics.js":1,
+			"sites\/default\/themes\/custom\/prevnar\/js\/cssua.min.js":1,
+			"sites\/default\/themes\/custom\/prevnar\/js\/lazyload.js":1
+		}
+	},
+	"CToolsModal":{
+			"closeText":"close",
+			"loadingText":"Loading...",
+			"closeImage":"\u003Cimg src=\u0022https:\/\/adult.prevnar13.com\/sites\/all\/modules\/contrib\/ctools\/images\/icon-close-window.png\u0022 alt=\u0022Close window\u0022 title=\u0022Close window\u0022 \/\u003E",
+			"throbber":"\u003Cimg src=\u0022https:\/\/adult.prevnar13.com\/sites\/default\/themes\/custom\/prevnar\/images\/loading-new1.gif\u0022 alt=\u0022\u0022 \/\u003E","animation":"fadeIn"
+		},
+		"currentPath":"node\/15",
+		"currentPathIsAdmin":false,
+		"password":{"strengthTitle":"Password compliance:"},
+		"type":"setting"
+		}
+	);
+//--><!]]>
+</script>
+<script type="text/javascript" src="https://adult.prevnar13.com/sites/default/files/advagg_js/js__8AAPcxZIVy1RysIr-QGy919sjVzMyHSajQBIFHywY98__fXdnNoG7myJMtrd4YDsb-vx1G9zDbqec2ciNx0TS0Jo__AnRaw0X-aZrXsWU7fjeFPMbtw2yF7MVlNEX4aDy2nz4.js" defer="defer"></script>
+<script type="text/javascript" src="https://adult.prevnar13.com/sites/default/files/advagg_js/js__sF96MW2c45ypzQ3PH3ku7ypRawaoI8QYS-ktPFrABjs__VeTS3cXIXGeHeHBKddkjVO2TjpKS8VDG7lqScawD2CY__AnRaw0X-aZrXsWU7fjeFPMbtw2yF7MVlNEX4aDy2nz4.js" defer="defer"></script>
+<!-- Adobe Analytics-->
+  <script type="text/javascript" language="JavaScript" src="//s3.amazonaws.com/pfe_im/js/prod/pcc/custom/adultprevnar13/s_code_config.js"></script>
+  <script type="text/javascript" language="JavaScript" src="//s3.amazonaws.com/pfe_im/js/prod/pcc/s_code.js"></script>
+  <script type="text/javascript" language="JavaScript"><!--
+  if (jQuery('html').hasClass('share-email-success-modal') == true) {
+		s.pfFormWorkflow('completed', 'send email', true);
+	  }
+  var  s_code=s.t();if(s_code)document.write(s_code)//--></script>
+  <script language="JavaScript" type="text/javascript"><!--
+  if(navigator.appVersion.indexOf('MSIE')>=0)document.write(unescape('%3C')+'\!-'+'-')
+  //--></script><!--/DO NOT REMOVE/-->
+<!-- End Adobe Analytics-->
+  
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"5f7dd2ba14","applicationID":"9773167","transactionName":"bgZQZkcHXENWARdZC1dMc1FBD11eGAwMVAFmE1NVUDlEWVIV","queueTime":0,"applicationTime":346,"atts":"QkFTEA8dT00=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>
